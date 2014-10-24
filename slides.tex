@@ -12,13 +12,16 @@
 \usetheme{Goettingen}
 \definecolor{raspi}{HTML}{bb1142}
 \definecolor{green_raspi}{HTML}{75aa28}
-\definecolor{myblack}{RGB}{34,34,34}
+\definecolor{myblack}{RGB}{14,14,14}
 
-\usecolortheme[named=green_raspi]{structure}
+\usecolortheme[named=myblack]{structure}
+\beamertemplatenavigationsymbolsempty 
 
 \beamertemplateshadingbackground{white!15}{raspi!5}
 \setbeamertemplate{sidebar canvas right}[vertical shading]%
-[top=raspi!50,bottom=white!90]
+[top=myblack!30,bottom=white!90]
+
+\mode<presentation>{\usebackgroundtemplate{\includegraphics[height=\paperheight]{back.png}}} 
 
 \setbeamertemplate{blocks}[rounded][shadow=false]
 \setbeamercolor{block body}{bg=green_raspi!30}
@@ -69,7 +72,7 @@ Il Raspberry Pi è un single-board computer (un calcolatore implementato su una 
 \pause
 \medskip
 
-...per\`o \`e pi\`u \textbf{piccolo}!
+...per\`o \`e pi\`u \textbf{piccolo} e funziona con \textbf{Linux}!
 
 \end{frame}
 
@@ -95,6 +98,7 @@ Il Raspberry Pi nasce nel Regno Unito, realizzato dalla \emph{Raspberry Pi Found
 \pause
 \medskip
 
+\begin{block}{}
 \`E nato con l'intendo di creare un computer:
 \pause
 \begin{itemize}
@@ -104,6 +108,7 @@ Il Raspberry Pi nasce nel Regno Unito, realizzato dalla \emph{Raspberry Pi Found
 \pause
 \item Che sia economicamente accessibile.
 \end{itemize}
+\end{block}
 \end{frame}
 
 \begin{frame}{Raspberry Pi - Model B}
@@ -122,15 +127,15 @@ Il Raspberry Pi nasce nel Regno Unito, realizzato dalla \emph{Raspberry Pi Found
 Per iniziare a divertirci con il nostro Raspberry Pi avremo bisogno di:
 \pause
 \begin{description}
-\item[Alimentatore] Micro USB, Output a 1200 $mA$.
+\item[{\color{green_raspi} Alimentatore}] Micro USB, Output a 1200 $mA$.
 \pause
-\item[Scheda SD] Da almeno 2 GB, meglio se da 4 GB (e possibilmente di classe 10).
+\item[{\color{green_raspi} Scheda SD}] Da almeno 2 GB, meglio se da 4 GB (e possibilmente di classe 10).
 \pause
-\item[Rete] Connessione ethernet ad internet.
+\item[{\color{green_raspi} Rete}] Connessione ethernet ad internet.
 \pause
-\item[Input] Mouse e tastiera USB (consigliati).
+\item[{\color{green_raspi} Input}] Mouse e tastiera USB (consigliati).
 \pause
-\item[Monitor] Con interfaccia HDMI o DVI (consigliati), oppure un televisore con entrata RCA.
+\item[{\color{green_raspi} Monitor}] Con interfaccia HDMI o DVI (consigliati), oppure un televisore con entrata RCA.
 \end{description}
 \end{frame}
 
@@ -180,6 +185,14 @@ Il costo per i modelli B/B+ si aggira intorno ai \textbf{35 euro}.
 
 \section{Distribuzioni Linux}
 
+\begin{frame}{}
+\begin{center}
+\begin{Huge}
+{\color{green_raspi} \textbf{Distribuzioni Linux}}
+\end{Huge}
+\end{center}
+\end{frame}
+
 \begin{frame}{Raspbian}
 \begin{center}
 \includegraphics[width=6cm]{raspbian_logo.png}
@@ -188,7 +201,9 @@ Il costo per i modelli B/B+ si aggira intorno ai \textbf{35 euro}.
 \pause
 \medskip
 
+\begin{block}{Raspbian}
 \textbf{Raspbian} \`e una versione modificata di \emph{Debian Wheezy} (una delle pi\`u famose distribuzioni di Linux) ottimizzata per architettura \textbf{arm}.
+\end{block}
 
 \pause
 \medskip
@@ -245,7 +260,7 @@ Il chip grafico del Raspberry Pi permette di fare il decoding di filmati in form
 \begin{frame}{}
 \begin{center}
 \begin{Huge}
-Use Cases
+{\color{green_raspi} \textbf{Use Cases}}
 \end{Huge}
 \end{center}
 
@@ -296,29 +311,121 @@ Use Cases
 \begin{frame}{}
 \begin{center}
 \begin{Huge}
-Prima installazione
+{\color{green_raspi} \textbf{Prima installazione}}
 \end{Huge}
 \end{center}
+\end{frame}
 
 \begin{frame}{Prima installazione}
+\begin{block}{NOOBS}
+
+Per la prima installazione consiglio di usare \textbf{NOOBS} (New Out Of the Box Software), un manager che ci aiutare durante l'installazione del nostro sistema operativo.
+
+\end{block}
+
+\pause
+\medskip
+
+NOOBS \`e sviluppato direttamente dalla Raspberry Pi Foundation, e sono presenti numerose guide che ci guideranno passo passo nella configurazione.
+
+\pause
+\medskip
+\begin{center}
+\url{http://www.raspberrypi.org/help/noobs-setup/}
+\end{center}
+
+\pause
+\medskip
+
+Si possono anche acquistare schede SD con NOOBS \textbf{precaricato} all'interno.
+
 \end{frame}
 
 \begin{frame}{1) Scaricare NOOBS}
+Scaricare NOOBS dal sito internet
+\begin{center}
+\url{http://www.raspberrypi.org/downloads/}
+
+\bigskip
+\includegraphics[width=8cm]{guide/1.png}
+
+\end{center}
 \end{frame}
 
 \begin{frame}{2) Formattare la scheda SD}
+Formattare una scheda SD da almeno \textbf{4 GB} e creare una nuova partizione con filesystem \textbf{FAT32}.
+
+\bigskip
+\begin{center}
+\includegraphics[width=8cm]{guide/2.png}
+\end{center}
 \end{frame}
 
-\begin{frame}{3) Copiare NOOBS su scheda SD} 
+\begin{frame}{3) Copiare NOOBS su scheda SD}
+Copiare il contenuto dell'archivio di NOOBS dentro la scheda SD (nella root, cio\`e senza creare cartelle).
+
+\medskip
+\begin{center}
+\includegraphics[width=8cm]{guide/3.png}
+\end{center}
 \end{frame}
 
 \begin{frame}{4) Avviare il Raspberry Pi}
+Inserire la scheda SD nel Raspberry Pi, collegare le periferiche (monitor, tastiera, etc...), collegare la rete, ed attaccare il raspberry all'alimentazione.
+
+\medskip
+\begin{center}
+\includegraphics[width=8cm]{guide/4.jpg}
+\end{center}
 \end{frame}
+
+
 
 \begin{frame}{5) Scegliere i S.O.}
+Scegliere dall'elenco di Sistemi Operativi che si vogliono installare su questa scheda SD.
+
+\medskip
+\begin{center}
+\includegraphics[width=8cm]{guide/5.png}
+\end{center}
+
+All'avvio potremo scegliere quale sistema avviare
+
 \end{frame}
 
+
 \begin{frame}{6) Attendere...}
+Attendi che il Raspberry Pi scarichi da internet tutti i sistemi operativi che hai scelto.
+
+\medskip
+\begin{center}
+\includegraphics[width=8cm]{guide/6.png}
+\end{center}
+\end{frame}
+
+\begin{frame}{}
+\begin{center}
+\begin{Huge}
+{\color{green_raspi} \textbf{Domande...?}}
+\end{Huge}
+
+\vspace{1.5cm}
+\begin{small}
+Slides realizzate da:\\
+\textbf{Nicola Corti - corti.nico [at] gmail [dot] com}\\
+
+\bigskip
+
+Slides realizzate con \LaTeX\ Beamer.\\
+La seguente presentazione \`e rilasciata sotto licenza\\
+\begin{footnotesize}	\textbf{Creative Commons - Attributions, Non Commercial, Share-alike}.
+\end{footnotesize}
+\\
+\medskip
+\includegraphics[height=0.5cm]{cc.png}
+
+\end{small}
+\end{center}
 \end{frame}
 
 \end{document}
