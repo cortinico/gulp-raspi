@@ -4,7 +4,6 @@
 
 \usepackage[italian, english]{babel} 
 \usepackage[utf8x]{inputenc}
-\usepackage[gen]{eurosym}
 
 \usepackage{hyperref}
 \usepackage{tabularx}
@@ -175,48 +174,134 @@ Estendiamo il nostro Raspberry Pi tramite:
 
 \medskip
 
-Il costo per i modelli B/B+ si aggira intorno ai 35 euro.
+Il costo per i modelli B/B+ si aggira intorno ai \textbf{35 euro}.
 
-\end{frame}
-
-\section{Use cases}
-
-\begin{frame}{Media Center}
-\end{frame}
-
-\begin{frame}{Server Domestico}
-\end{frame}
-
-\begin{frame}{Torrent Server}
-\end{frame}
-
-\begin{frame}{Console Arcade}
-\end{frame}
-
-\begin{frame}{Terminal Server}
-\end{frame}
-
-\begin{frame}{Home automation/security}
-\end{frame}
-
-\begin{frame}{Learn to programming}
-\end{frame}
-
-\begin{frame}{Voip Server}
 \end{frame}
 
 \section{Distribuzioni Linux}
 
 \begin{frame}{Raspbian}
+\begin{center}
+\includegraphics[width=6cm]{raspbian_logo.png}
+\end{center}
+
+\pause
+\medskip
+
+\textbf{Raspbian} \`e una versione modificata di \emph{Debian Wheezy} (una delle pi\`u famose distribuzioni di Linux) ottimizzata per architettura \textbf{arm}.
+
+\pause
+\medskip
+
+Raspbian fornisce un insieme molto grande di pacchetti gi\`a funzionanti per Raspberry Pi, installabili tramite il famoso comando \texttt{apt-get install}.
+
+\pause
+\medskip
+\begin{center}
+\url{http://www.raspbian.org/}
+\end{center}
 \end{frame}
 
-\begin{frame}{Raspbmc}
+\begin{frame}[fragile]{Raspbmc - OpenELEC}
+
+\begin{columns}
+    \begin{column}{0.5\textwidth}
+    \begin{center}
+    
+    \includegraphics[height=2cm]{raspbmc_logo.png}
+
+    \end{center}	
+	\end{column}
+
+    \begin{column}{0.5\textwidth}
+    \begin{center}
+    
+    \includegraphics[height=2cm]{open_elec.png}
+
+    \end{center}	
+	\end{column}
+\end{columns}
+
+\bigskip
+\pause
+
+\textbf{Raspbmc} ed \textbf{OpenELEC} sono due distribuzioni che 	forniscono il media center \textbf{XBMC}, che permette di trasformare il vostro Raspberry Pi in un media center domestico.
+
+\pause
+\medskip
+
+Il chip grafico del Raspberry Pi permette di fare il decoding di filmati in formato \textbf{H.264} fino a \textbf{1080p}.
+
+\pause
+\begin{center}
+\url{http://www.raspbmc.com/} \\
+\url{http://openelec.tv/}
+\end{center}
+
 \end{frame}
 
-\begin{frame}{NOOBS}
+\section{Use cases}
+
+\begin{frame}{}
+\begin{center}
+\begin{Huge}
+Use Cases
+\end{Huge}
+\end{center}
+
+\end{frame}
+
+\begin{frame}{Media Center}
+\begin{center}
+\includegraphics[height=7cm]{uc/media.jpg}
+\end{center}
+\end{frame}
+
+\begin{frame}{Computer Domestico}
+\begin{center}
+\includegraphics[width=9cm]{uc/pc.png}
+\end{center}
+\end{frame}
+
+\begin{frame}{Torrent Server}
+\begin{center}
+\includegraphics[width=9cm]{uc/torrent.png}
+\end{center}
+\end{frame}
+
+\begin{frame}{Home security}
+\begin{center}
+\includegraphics[width=9cm]{uc/security.jpg}
+\end{center}
+\end{frame}
+
+\begin{frame}{Scratch}
+\begin{center}
+\includegraphics[width=9cm]{uc/scratch.png}
+\end{center}
+\end{frame}
+
+\begin{frame}{Altro...}
+\begin{center}
+\includegraphics<1>[width=9cm]{uc/cluster.jpg}
+\includegraphics<2>[width=9cm]{uc/arcade.jpg}
+\includegraphics<3>[width=9cm]{uc/keyboard.jpg}
+\includegraphics<4>[width=9cm]{uc/drone.jpg}
+
+\end{center}
 \end{frame}
 
 \section{Prima installazione}
+
+\begin{frame}{}
+\begin{center}
+\begin{Huge}
+Prima installazione
+\end{Huge}
+\end{center}
+
+\begin{frame}{Prima installazione}
+\end{frame}
 
 \begin{frame}{1) Scaricare NOOBS}
 \end{frame}
