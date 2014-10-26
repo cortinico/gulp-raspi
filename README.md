@@ -1,7 +1,9 @@
 gulp-raspi
 ==========
 
-Slides del seminario del Linux Day 2014 Pisa sul Raspberry Pi
+Slides del seminario del Linux Day 2014 Pisa sul Raspberry Pi.
+
+Le slides sono state realizzate con LaTeX Beamer e sono rilasciate sotto licenza [CC By-Nc-Sa 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/)
 ![Front](http://i58.tinypic.com/2pttjmg.png)
 
 ### Link
