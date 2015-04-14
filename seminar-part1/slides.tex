@@ -53,18 +53,26 @@
 \begin{frame}{Cosa \`e il Raspberry Pi}
 
 \pause
-
+\begin{block}{}
 Il Raspberry Pi \`e a tutti gli effetti un \textbf{computer}, che ci permette sostanzialmente di effettuare le stesse operazioni che faremo con un computer classico.
+\end{block}
 
 \pause
+\medskip
 
 Ha le stesse prestazioni di un PC di \textbf{inizio anni 2000}, ma:
+\pause
 \begin{itemize}
 \item Consuma di meno.
+\pause
 \item \`E molto pi\`u piccolo!
-
+\pause
+\item Possiamo lasciarlo acceso senza limiti.
+\pause
 \end{itemize}
+\end{frame}
 
+\begin{frame}{Cosa \`e il Raspberry Pi}
 \begin{block}{Cosa \`e?}
 \emph{
 Il Raspberry Pi è un single-board computer (un calcolatore implementato su una sola scheda elettronica).}
@@ -81,11 +89,15 @@ Il Raspberry Pi è un single-board computer (un calcolatore implementato su una 
 
 ...per\`o \`e pi\`u \textbf{piccolo} e funziona con \textbf{Linux}!
 
+\begin{center}
+\visible<2>{\includegraphics[width=2cm]{tux.png}}
+\end{center}
+
 \end{frame}
 
 \begin{frame}{Cosa \`e il Raspberry Pi}
 \begin{center}
-\includegraphics[width=9cm]{raspi.png}
+\includegraphics[width=9cm]{raspi-artistic.jpg}
 \end{center}
 \end{frame}
 
@@ -118,11 +130,61 @@ Il Raspberry Pi nasce nel Regno Unito, realizzato dalla \emph{Raspberry Pi Found
 \end{block}
 \end{frame}
 
+\begin{frame}{Quanto costa?}
+
+I vari modelli di Raspberry Pi costanno all'incirca \textbf{35 euro}. Come fa a costare cos\`i poco?
+
+\medskip
+\pause
+
+\begin{enumerate}
+\item Istruzioni assenti
+\pause
+\item Case assente
+\pause
+\item Alimentatore assente
+\pause
+\item SD assente
+\pause
+\item Pulsante di accensione assente
+\end{enumerate}
+
+\visible<7>{
+\begin{center}\includegraphics[width=4cm]{box.png}\end{center}
+}
+
+\end{frame}
+
+
 \section{Modelli di Raspberry}
+
+\begin{frame}{Raspberry Pi - Model A}
+\begin{center}
+\includegraphics[width=9cm]{raspiA.png}
+\end{center}
+\end{frame}
+
+\begin{frame}{Raspberry Pi - Model A+}
+\begin{center}
+\includegraphics[width=9cm]{raspiA+.png}
+\end{center}
+\end{frame}
 
 \begin{frame}{Raspberry Pi - Model B}
 \begin{center}
-\includegraphics[width=9cm]{scheme.png}
+\includegraphics[width=9cm]{raspiB.png}
+\end{center}
+\end{frame}
+
+\begin{frame}{Raspberry Pi - Model B+}
+\begin{center}
+\includegraphics[width=9cm]{raspiB+.png}
+\end{center}
+\end{frame}
+
+\begin{frame}{Raspberry Pi 2 - Model B}
+\begin{center}
+\includegraphics[width=9cm]{raspi2.png}
 \end{center}
 \end{frame}
 
@@ -134,13 +196,13 @@ Il Raspberry Pi nasce nel Regno Unito, realizzato dalla \emph{Raspberry Pi Found
 
 \section{Accessori}
 
-\begin{frame}{Cosa serve per far funzionare un Raspberry Pi}
+\begin{frame}{La lista della spesa}
 Per iniziare a divertirci con il nostro Raspberry Pi avremo bisogno di:
 \pause
 \begin{description}
 \item[{\color{green_raspi} Alimentatore}] Micro USB, Output a 1200 $mA$.
 \pause
-\item[{\color{green_raspi} Scheda SD}] Da almeno 2 GB, meglio se da 4 GB (e possibilmente di classe 10).
+\item[{\color{green_raspi} Scheda SD}] Da almeno 4 GB, meglio se da 8 GB (e possibilmente di classe 10).
 \pause
 \item[{\color{green_raspi} Rete}] Connessione ethernet ad internet.
 \pause
@@ -189,11 +251,6 @@ Estendiamo il nostro Raspberry Pi tramite:
 \end{center}
 
 \`E possibile acquistare il Raspberry Pi presso uno dei distributori ufficiali, oppure anche su qualsiasi altro shop online che venda articoli di elettronica.
-
-\medskip
-
-Il costo per i modelli B/B+ si aggira intorno ai \textbf{35 euro}.
-
 \end{frame}
 
 \section{Distribuzioni Linux}
@@ -229,6 +286,18 @@ Raspbian fornisce un insieme molto grande di pacchetti gi\`a funzionanti per Ras
 \url{http://www.raspbian.org/}
 \end{center}
 \end{frame}
+
+\begin{frame}{Raspbian}
+
+Raspbian mette a disposizione il comando \texttt{raspi-config} per configurare tutti gli aspetti del proprio Raspberry Pi.
+
+\begin{center}
+\includegraphics[width=8cm]{raspi-config.png}
+\end{center}
+
+\end{frame}
+
+
 
 \begin{frame}[fragile]{Raspbmc - OpenELEC}
 
