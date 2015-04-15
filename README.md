@@ -1,4 +1,4 @@
-gulp-raspi
+Raspberry Pi - Il computer che hai sempre voluto avere
 ==========
 
 Slides del seminario del Linux Day 2014 Pisa sul Raspberry Pi. Sono inoltre presenti le slides dei due seminari sul Raspberry Pi dell'Aprile 2015.
