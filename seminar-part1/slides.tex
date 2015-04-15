@@ -8,6 +8,7 @@
 \usepackage{hyperref}
 \usepackage{tabularx}
 \usepackage{url}
+\usepackage{pbox}
 
 \usetheme{Goettingen}
 \definecolor{raspi}{HTML}{bb1142}
@@ -43,6 +44,7 @@
 \end{frame}
 
 \section{Introduzione}
+\subsection{Cosa \`e?}
 
 \begin{frame}{Cosa \`e il Raspberry Pi}
 \begin{center}
@@ -101,7 +103,7 @@ Il Raspberry Pi è un single-board computer (un calcolatore implementato su una 
 \end{center}
 \end{frame}
 
-
+\subsection{Come nasce?}
 \begin{frame}{Come nasce il Raspberry Pi}
 \begin{center}
 \includegraphics[width=6cm]{logo_raspi.png}
@@ -130,6 +132,7 @@ Il Raspberry Pi nasce nel Regno Unito, realizzato dalla \emph{Raspberry Pi Found
 \end{block}
 \end{frame}
 
+\subsection{Quanto costa?}
 \begin{frame}{Quanto costa?}
 
 I vari modelli di Raspberry Pi costanno all'incirca \textbf{35 euro}. Come fa a costare cos\`i poco?
@@ -188,14 +191,68 @@ I vari modelli di Raspberry Pi costanno all'incirca \textbf{35 euro}. Come fa a 
 \end{center}
 \end{frame}
 
-\begin{frame}{Quali modelli di Raspberry Pi}
+\subsection{Tech specs}
+\begin{frame}[fragile]{Specifiche tecniche}
 \begin{center}
-\includegraphics[width=9.5cm]{table.png}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+ & \textbf{A} & \textbf{A+} & \textbf{B} & \textbf{B+} & \textbf{2} \\
+\hline
+\textbf{CPU} & \multicolumn{4}{c|}{{\tiny BMC2835 700 MHz ARM11}} & {\tiny BCM2836 900 MHz A7} \\
+\hline
+\textbf{GPU} & \multicolumn{5}{c|}{{\tiny Broadcom VideoCore IV, OpenGL ES 2.0, 1080p H.264 decode}} \\
+\hline
+\textbf{RAM} & \multicolumn{2}{c|}{{\tiny 256 Mb shared}} & \multicolumn{2}{c|}{{\tiny 512 Mb shared}} & {\tiny 1 Gb shared}\\
+\hline
+\textbf{USB} & \multicolumn{2}{c|}{{\tiny 1}} & {\tiny 2 (HUB)} & \multicolumn{2}{c|}{{\tiny 4 (HUB)}} \\
+\hline
+\textbf{SD} & {\tiny SD/MMC} & {\tiny micro SD} & {\tiny SD/MMC} & \multicolumn{2}{c|}{{\tiny micro SD}} \\
+\hline
+\textbf{Video} & \multicolumn{5}{c|}{{\tiny RCA and HDMI ports}} \\
+\hline
+\textbf{Audio} & \multicolumn{5}{c|}{{\tiny 3,5 mm jack and HDMI}} \\
+\hline
+\textbf{Network} & \multicolumn{2}{c|}{{\tiny None}} & \multicolumn{3}{c|}{{\tiny Ethernet 10/100 (RJ45)}}\\
+\hline
+\end{tabular}
+\end{center}
+\end{frame}
+
+\begin{frame}[fragile]{Specifiche tecniche}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+ & \textbf{A} & \textbf{A+} & \textbf{B} & \textbf{B+} & \textbf{2} \\
+\hline
+\textbf{Video in} & \multicolumn{5}{c|}{{\tiny 15-pin MIPI camera interface (CSI) connector}} \\
+\hline
+\textbf{Audio in} & \multicolumn{5}{c|}{{\tiny From revision 2 boards through I²S}} \\
+\hline
+\textbf{Clock} & \multicolumn{5}{c|}{{\tiny No clock or battery}} \\
+\hline 
+\textbf{GPIO} & {\tiny 26 pins} & {\tiny 40 pins} & {\tiny 26 pins} & \multicolumn{2}{c|}{{\tiny 40 pins}} \\
+\hline
+\textbf{Power} & {\tiny 300 mA} & {\tiny 200 mA} & {\tiny 700 mA} & {\tiny 600 mA} & {\tiny 800 mA} \\
+\hline
+\textbf{Weight} & {\tiny 45 g} & {\tiny 23 g} & \multicolumn{3}{c|}{{\tiny 45 g}} \\
+\hline
+\textbf{Size} & {\tiny 85 × 56 mm } & {\tiny 65 × 56 mm } & \multicolumn{3}{c|}{{\tiny 85 × 56 mm}} \\
+\hline
+\textbf{Price} & {\tiny 25 \$} & {\tiny 20 \$} & \multicolumn{3}{c|}{{\tiny 35 \$}} \\
+\hline
+\end{tabular}
+\end{center}
+\end{frame}
+
+\begin{frame}{GPIO}
+\begin{center}
+\includegraphics[width=9cm]{gpio.jpg}
 \end{center}
 \end{frame}
 
 \section{Accessori}
 
+\subsection{Essenziali}
 \begin{frame}{La lista della spesa}
 Per iniziare a divertirci con il nostro Raspberry Pi avremo bisogno di:
 \pause
@@ -212,6 +269,13 @@ Per iniziare a divertirci con il nostro Raspberry Pi avremo bisogno di:
 \end{description}
 \end{frame}
 
+\begin{frame}{Pi Starter Kit}
+\begin{center}
+\includegraphics[width=8cm]{kit.jpg}
+\end{center}
+\end{frame}
+
+\subsection{Addons}
 \begin{frame}[fragile]{Accessori per il Raspberry Pi}
 Estendiamo il nostro Raspberry Pi tramite:
 \vspace{1cm}
@@ -272,7 +336,7 @@ Estendiamo il nostro Raspberry Pi tramite:
 \medskip
 
 \begin{block}{Raspbian}
-\textbf{Raspbian} \`e una versione modificata di \emph{Debian Wheezy} (una delle pi\`u famose distribuzioni di Linux) ottimizzata per architettura \textbf{arm}.
+\textbf{Raspbian} \`e una versione modificata di \emph{Debian Wheezy} (una delle pi\`u famose distribuzioni di Linux) ottimizzata per architettura \textbf{arm}. L'ambiente desktop di default \`e \textbf{LXDE}
 \end{block}
 
 \pause
@@ -288,6 +352,13 @@ Raspbian fornisce un insieme molto grande di pacchetti gi\`a funzionanti per Ras
 \end{frame}
 
 \begin{frame}{Raspbian}
+\begin{center}
+\includegraphics[width=9cm]{raspbian-desktop.jpg}
+\end{center}
+\end{frame}
+
+
+\begin{frame}{Raspbian}
 
 Raspbian mette a disposizione il comando \texttt{raspi-config} per configurare tutti gli aspetti del proprio Raspberry Pi.
 
@@ -297,7 +368,33 @@ Raspbian mette a disposizione il comando \texttt{raspi-config} per configurare t
 
 \end{frame}
 
+\begin{frame}{Pidora}
+\begin{center}
+\includegraphics[width=6cm]{pidora.png}
+\end{center}
 
+\medskip
+\pause
+
+Versione ``alleggerita'' di \textbf{Fedora}, compilata per girare su piattaforma ARM.
+
+\medskip
+\pause
+
+\textbf{XFCE} Ambiente desktop di default. \textbf{RPM} Package Manager.
+
+\pause
+\medskip
+\begin{center}
+\url{http://www.pidora.ca/}
+\end{center}
+\end{frame}
+
+\begin{frame}{Pidora}
+\begin{center}
+\includegraphics[width=9cm]{pidora-desktop.jpg}
+\end{center}
+\end{frame}
 
 \begin{frame}[fragile]{Raspbmc - OpenELEC}
 
@@ -360,30 +457,93 @@ Il chip grafico del Raspberry Pi permette di fare il decoding di filmati in form
 \end{center}
 \end{frame}
 
+\begin{frame}{Message Board/Kiosk}
+\begin{center}
+\includegraphics[width=9cm]{uc/board.jpg}
+
+\medskip
+\url{https://pipresents.wordpress.com/}
+\end{center}
+\end{frame}
+
 \begin{frame}{Torrent Server}
 \begin{center}
 \includegraphics[width=9cm]{uc/torrent.png}
 \end{center}
 \end{frame}
 
+\begin{frame}{NAS}
+\begin{center}
+\includegraphics[width=9cm]{uc/nas.jpg}
+\newline
+\medskip
+\url{https://owncloud.org/}
+\end{center}
+\end{frame}
+
 \begin{frame}{Home security}
 \begin{center}
 \includegraphics[width=9cm]{uc/security.jpg}
+\newline
+\medskip
+\url{http://www.projects.privateeyepi.com/}
 \end{center}
 \end{frame}
 
 \begin{frame}{Scratch}
 \begin{center}
 \includegraphics[width=9cm]{uc/scratch.png}
+\newline
+\medskip
+\url{https://scratch.mit.edu/}
+\end{center}
+\end{frame}
+
+\begin{frame}{Arcade box}
+\begin{center}
+\includegraphics[width=9cm]{uc/arcade.jpg}
+\end{center}
+\end{frame}
+
+\begin{frame}{Arcade box}
+\begin{center}
+\url{http://pimame.org/}
+\end{center}
+\begin{itemize}
+\begin{footnotesize}
+\item MAME - AdvanceMAME \& MAME4ALL
+\item CPS I / CPS II - Final Burn Alpha
+\item Neo Geo - GNGeo
+\item Playstation - pcsx-reARMed
+\item Genesis - DGen
+\item SNES - SNES9x
+\item NES - AdvMESS
+\item Gameboy - Gearboy
+\item Gameboy Advance - GPSP
+\item ScummVM
+\item Atari 2600 - Stella
+\item Cavestory - NXEngine
+\item Commodore 64 - VICE
+
+\end{footnotesize}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Altro...}
+\begin{center}
+\includegraphics[width=9cm]{uc/radio.jpg}
+\medskip
+\newline
+\url{http://www.woutervanwijk.nl/pimusicbox/}
 \end{center}
 \end{frame}
 
 \begin{frame}{Altro...}
 \begin{center}
 \includegraphics<1>[width=9cm]{uc/cluster.jpg}
-\includegraphics<2>[width=9cm]{uc/arcade.jpg}
-\includegraphics<3>[width=9cm]{uc/keyboard.jpg}
-\includegraphics<4>[width=9cm]{uc/drone.jpg}
+\includegraphics<2>[width=9cm]{uc/keyboard.jpg}
+\includegraphics<3>[width=9cm]{uc/drone.jpg}
 
 \end{center}
 \end{frame}
@@ -483,6 +643,28 @@ Attendi che il Raspberry Pi scarichi da internet tutti i sistemi operativi che h
 \begin{center}
 \includegraphics[width=8cm]{guide/6.png}
 \end{center}
+\end{frame}
+
+\section{Riferimenti}
+\begin{frame}{Cookbook}
+\begin{center}
+\includegraphics[width=5cm]{book.jpg}
+\medskip
+\newline
+\url{http://it-ebooks.info/book/3175/}
+\end{center}
+\end{frame}
+
+\begin{frame}{Web}
+\begin{enumerate}
+\begin{footnotesize}
+\item \url{https://www.raspberrypi.org/}
+\item \url{https://www.raspberrypi.org/help/quick-start-guide/}
+\item \url{https://www.raspberrypi.org/help/noobs-setup/}
+\item \url{http://elinux.org/RPi_Hub}
+\item \url{http://www.raspbian.org/RaspbianDocumentation}
+\end{footnotesize}
+\end{enumerate}
 \end{frame}
 
 \begin{frame}{}
