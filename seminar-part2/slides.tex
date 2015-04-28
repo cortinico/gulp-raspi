@@ -48,8 +48,12 @@
 \begin{frame}{}
 \begin{center}
 \begin{Huge}
-{\color{green_raspi} \textbf{NOOBS}}
+{\color{green_raspi} \textbf{NOOBS}} \\
 \end{Huge}
+\medskip
+\begin{figure}
+\includegraphics[height=4cm]{meme1.jpg}
+\end{figure}
 \end{center}
 \end{frame}
 
@@ -147,6 +151,10 @@ Attendi che il Raspberry Pi scarichi da internet tutti i sistemi operativi che h
 \begin{Huge}
 {\color{green_raspi} \textbf{raspi-config}}
 \end{Huge}
+\medskip
+\begin{figure}
+\includegraphics[height=5cm]{meme2.png}
+\end{figure}
 \end{center}
 \end{frame}
 
@@ -161,20 +169,17 @@ Vediamo nel dettaglio le varie funzionalit\`a
 \end{frame}
 
 \begin{frame}\frametitle{raspi-config}
+\begin{small}
 \begin{description}
   \item[\textbf{Expand Filesystem}] per espandere il filesystem al fine di occupare tutto lo spazio sulla scheda SD (non necessario nel caso di NOOBS).
   \item[\textbf{Change User Password}] per cambiare la password di default (user \textbf{pi} password \textbf{raspberry}).
   \item[\textbf{Boot to Dekstop/Scratch}] per cambiare le opzioni di boot (Desktop, Linea di comando o direttamente su Scratch).
   \item[\textbf{Internationalisation}] per cambiare le impostazioni internazionali (lingua, tastiera, etc.).
-\end{description}
-\end{frame}
-
-\begin{frame}\frametitle{raspi-config}
-\begin{description}
   \item[\textbf{Camera}] per abilitare la Pi-Cam.
   \item[\textbf{Rastrack}] per aggiungere il nostro Raspberry alla mappa di tracciamento globale.
-  \item[\textbf{Overclock}] per impostare l'overclock del nostro raspberry (attenzione...).
+  \item[\textbf{Overclock}] per impostare l'overclock del nostro raspberry.
 \end{description}
+\end{small}
 \end{frame}
 
 \begin{frame}\frametitle{raspi-config (advanced options)}
@@ -184,6 +189,7 @@ Abbiamo anche una serie di opzioni avanzate:
   \item[\textbf{Hostname}] per cambiare il nome del Raspberry Pi.
   \item[\textbf{Memory}] per cambiare l'allocazione di RAM fra CPU/GPU.
   \item[\textbf{SSH}] per abilitare il server SSH.
+  \item[\textbf{Audio}] per impostare il canale audio predefinito.
   \item[\textbf{Update}] per aggiornare \texttt{raspi-config}.
 \end{description}
 \medskip
@@ -197,22 +203,34 @@ Abbiamo anche una serie di opzioni avanzate
 \begin{Huge}
 {\color{green_raspi} \textbf{config.txt}}
 \end{Huge}
+\medskip
+\begin{figure}
+\includegraphics[height=4cm]{meme3.jpg}
+\end{figure}
 \end{center}
 \end{frame}
 
 \begin{frame}\frametitle{config.txt}
+
+\begin{block}{config.txt}
 Il Raspberry Pi non dispone di un \textbf{BIOS}, tutte le informazioni di boot vengono lette del file \texttt{\textbf{config.txt}}.
-
+\end{block}
 \medskip
 \pause
 
-Il file si trova nel percorso \texttt{/boot/config.txt}, oppure pu\`o essere editato da un'altro sistema 
+Il file si trova nel percorso \texttt{/boot/config.txt}, oppure pu\`o essere editato da un'altro sistema, andando a cercare il file all'interno della scheda SD.
+
+\medskip
+
+Il file contiene commenti su ogni propriet\`a che permettono di capire cosa andremo a coinvolgere.
 
 \medskip
 \pause
+\begin{block}{}
 \begin{small}
-\url{https://www.raspberrypi.org/documentation/configuration/config-txt.md}  
+\textbf{\url{https://www.raspberrypi.org/documentation/configuration/config-txt.md}  }
 \end{small}
+\end{block}
 \end{frame}
 
 \begin{frame}[fragile]\frametitle{config.txt}
@@ -241,6 +259,9 @@ gpu_mem=64
 \begin{Huge}
 {\color{green_raspi} \textbf{Networking}}
 \end{Huge}
+\begin{figure}
+\includegraphics[height=4cm]{meme4.png}
+\end{figure}
 \end{center}
 \end{frame}
 
@@ -296,20 +317,25 @@ network={
 \begin{Huge}
 {\color{green_raspi} \textbf{Remote Access}}
 \end{Huge}
+\begin{figure}
+\includegraphics[height=4cm]{meme5.png}
+\end{figure}
 \end{center}
 \end{frame}
 
 \begin{frame}\frametitle{SSH}
 Ricordarsi di attivare il \textbf{server SSH} da \texttt{raspi-config}. Cos\`i sar\`a possibile collegarsi da remoto usando il comando:
 \medskip
+\begin{block}{}
 \begin{center}
-\texttt{ssh pi \@ [ip\_addr\_raspi]}
+\textbf{\texttt{ssh pi@[ip\_addr\_raspi]}}
 \end{center}
-Dove \texttt{[ip\_addr\_raspi]} rappresenta l'indirizzo IP del vostro Raspberry (statico o dinamico).
+\end{block}
+Dove \texttt{[ip\_addr\_raspi]} rappresenta l'indirizzo IP del vostro Raspberry (statico o dinamico). \`E consigliabile l'uso di un IP statico per non dover andare a cercare ogni volta l'IP dinamico assegnato al Raspberry.
 \end{frame}
 
 \begin{frame}\frametitle{SFTP/SCP}
-Per trasferire files possiamo usare il comando \textbf{\texttt{SCP}} oppure utilizzare il protocollo \texttt{\textbf{SFTP}}, entrambi si basano su SSH. Possiamo utilizzare un software tipo \textbf{FileZilla} per trasferire files
+Per trasferire files possiamo usare SCP oppure utilizzare il protocollo SFTP, entrambi si basano su SSH. Possiamo utilizzare un software tipo \textbf{FileZilla} per trasferire files
 \medskip
 \begin{center}
 \includegraphics[width=6cm]{filezilla.png}
@@ -319,19 +345,17 @@ Per trasferire files possiamo usare il comando \textbf{\texttt{SCP}} oppure util
 \begin{frame}[fragile]\frametitle{VNC}
 Per utilizzare il protocollo VNC per aprire una sessione grafica remota sul Raspberry Pi. Configuriamolo sul Raspberry Pi cos\`i:
 \medskip
+\begin{block}{}
 \begin{verbatim}
 sudo apt-get install tightvncserver
 tightvncserver
 vncserver :0 -geometry 1920x1080 -depth 24
 \end{verbatim}
-Colleghiamoci da un altro computer usando il software \texttt{xtightvncviewer} oppure tramite \texttt{remmina}.
+\end{block}
+\medskip
+Colleghiamoci da un altro computer usando il software \textbf{xtightvncviewer} oppure tramite \textbf{remmina}.
 \end{frame}
 
-\begin{frame}\frametitle{DDNS}
-    
-
-
-\end{frame}
 
 %%%%%%%%%%%%%%%%
 \section{A simple daemon}
@@ -340,6 +364,9 @@ Colleghiamoci da un altro computer usando il software \texttt{xtightvncviewer} o
 \begin{Huge}
 {\color{green_raspi} \textbf{A simple daemon}}
 \end{Huge}
+\begin{figure}
+\includegraphics[height=4cm]{meme6.jpg}
+\end{figure}
 \end{center}
 \end{frame}
 
@@ -347,7 +374,7 @@ Colleghiamoci da un altro computer usando il software \texttt{xtightvncviewer} o
 Vedremo adesso come configurare il demone di \texttt{\textbf{transmission}}, un noto client bittorrent per Linux.
 \medskip
 \begin{center}
-\includegraphics[width=5cm]{transmission-icon.png}
+\includegraphics[width=3cm]{transmission-icon.png}
 \end{center}
 \end{frame}
 
@@ -355,10 +382,15 @@ Vedremo adesso come configurare il demone di \texttt{\textbf{transmission}}, un 
 Per prima cosa dobbiamo assicurarci di avere lo spazio necessario per poter scaricare files. Possiamo utilizzare un hard disk esterno collegandolo ad una delle prese USB del Raspberry Pi.
 \medskip
 Utilizzando il comando \texttt{sudo fdisk -l} \`e possibile indivuare il nome della periferica e montarla tramite il comando:
+\begin{block}{}
 \begin{verbatim}
 sudo mkdir /mnt/hd
 sudo mount /dev/sdaX /mnt/hd
 \end{verbatim}
+\end{block}
+
+\medskip
+Dove \texttt{sdaX} \`e sostituito con il nome della periferica ricavato da \texttt{fdisk}.
 \end{frame}
 
 \begin{frame}\frametitle{mount}
@@ -371,51 +403,49 @@ Il file system ottimale \`e \textbf{ext3/4} in quanto \textbf{FAT32} non support
 
 \begin{frame}[fragile]\frametitle{setup}
 Installiamo il demone tramite il comando
+\begin{block}{}
 \begin{verbatim}
 sudo apt-get install transmission-daemon
 \end{verbatim}
+\end{block}
 \medskip
 E creiamo due cartelle sulla nostra unit\`a esterna.
+\begin{block}{}
 \begin{verbatim}
 mkdir /mnt/hd/complete
 mkdir /mnt/hd/incomplete
 \end{verbatim}
+\end{block}
 \end{frame}
 
 \begin{frame}[fragile]\frametitle{configuration}
-Andiamo a configurare il server tramite il file \texttt{settings.json} nella cartella \texttt{/etc/transmission-daemon/}
+Andiamo a configurare il server tramite il file \textbf{\texttt{settings.json}} nella cartella \texttt{/etc/transmission-daemon/}
 \medskip
-\begin{small}
+\begin{footnotesize}
 \begin{description}
-  \item[download-dir] La cartella dove vanno i file completi.
-  \item[incomplete-dir] La cartella dove vanno i file incompleti.
-  \item[incomplete-dir-enabled] True, per abilitare la cartella incomplete.
+  \item[\textbf{download-dir}] La cartella dove vanno i file completi.
+  \item[\textbf{incomplete-dir}] La cartella dove vanno i file incompleti.
+  \item[\textbf{incomplete-dir-enabled}] True, per abilitare la cartella incomplete.
+  \item[\textbf{rpc-enabled}] True per attivare l'RPC.
+  \item[\textbf{rpc-password}] Password di accesso.
+  \item[\textbf{rpc-username}] Nome utente di accesso.
+  \item[\textbf{rpc-port}] Porta su cui \`e in ascolto RPC.
+  \item[\textbf{rpc-whitelist-enabled}] False, altrimenti dobbiamo indicare la lista di IP consentiti.
 \end{description}
-\end{small}
-\end{frame}
-
-\begin{frame}[fragile]\frametitle{RPC}
-Configuriamo le impostazioni per l'RPC (Controllo da remoto).
-\medskip
-\begin{small}
-\begin{description}
-  \item[rpc-enabled] True per attivare l'RPC.
-  \item[rpc-password] Password di accesso.
-  \item[rpc-username] Nome utente di accesso.
-  \item[rpc-port] Porta su cui \`e in ascolto RPC.
-  \item[rpc-whitelist-enabled] False, altrimenti dobbiamo indicare la lista di IP consentiti.
-\end{description}
-\end{small}
+\end{footnotesize}
 \end{frame}
 
 \begin{frame}[fragile]\frametitle{reload \& restart}
 Dobbiamo infine gestire i permessi con questi comandi:
+\begin{block}{}
 \begin{verbatim}
 sudo adduser pi debian-transmission
 \end{verbatim}
+\end{block}
 \medskip
-Andiamo nel file \texttt{/etc/init.d/transmission-daemon} e modifichiamo la riga USER= inserendo il proprio nome utente (in questo caso \texttt{pi}).
+Andiamo nel file \texttt{/etc/init.d/transmission-daemon} e modifichiamo la riga \texttt{\textbf{USER=}} inserendo il proprio nome utente (in questo caso \texttt{pi}).
 \medskip
+\begin{block}{}
 \begin{small}
 \begin{verbatim}
 sudo chown pi -R /var/lib/transmission-daemon/info/
@@ -424,22 +454,41 @@ sudo /etc/init.d/transmission-daemon/reload
 sudo /etc/init.d/transmission-daemon/restart
 \end{verbatim}
 \end{small}
+\end{block}
 \end{frame}
 
-% \begin{frame}\frametitle{remotes}
-% Possiamo adesso gestire il nostro server tramite
-% \begin{itemize}
-%   \item Interfacce web (\texttt{http://[indirizzo_ip]:9091/})
-%   \item Applicazioni quali \textbf{Transmission Remote GUI}
-%   \item App mobile quali \textbf{Transmission Remote GUI}
-% \end{itemize}
-% \end{frame}
+\begin{frame}\frametitle{remotes}
+Possiamo adesso gestire il nostro server tramite
+\begin{itemize}
+  \item Interfacce web (\texttt{http://[indirizzo\_ip]:9091/})
+  \item Applicazioni quali \textbf{Transmission Remote GUI}
+  \item App mobile quali \textbf{Remote Transmission} per android.
+\end{itemize}
+\end{frame}
 
-% \begin{frame}\frametitle{remotes}
-% \begin{center}
-% \includegraphics[width=6cm]{remote-android.jpg}
-% \end{center}
-% \end{frame}
+\begin{frame}\frametitle{remotes}
+\begin{center}
+\includegraphics[width=4cm]{remote-android.jpg}
+\end{center}
+\end{frame}
+
+\begin{frame}\frametitle{DDNS}
+Tutto questo funziona nella propria rete locale. Per accedere al raspberry dobbiamo
+\begin{block}{}
+\begin{enumerate}
+  \item Configurare un \textbf{Dynamic DNS} presso un servizio esterno (\url{no-ip.com}).
+  \item Aggiornare il DDNS ad ogni cambio di indirizzo IP (pubblico):
+  \begin{itemize}
+    \item Configurando il proprio router (non sempre possibile),
+    \item Installando un demone per il Raspberry
+  \end{itemize}
+  \item Aprire le porte del proprio router in base ai servizi che si vogliono esporre (attenzione...).
+\end{enumerate}
+\end{block}{}
+
+\medskip
+Una piccola guida su come configurare \textbf{no-ip} su Raspberry la potete trovare su {\small \url{http://raspberrypihelp.net/tutorials/29-raspberry-pi-no-ip-tutorial}}.
+\end{frame}
 
 \begin{frame}{}
 \begin{center}
