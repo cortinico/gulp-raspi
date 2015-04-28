@@ -9,7 +9,7 @@ Le slides sono state realizzate con LaTeX Beamer e sono rilasciate sotto licenza
 
 * [Slides Seminario Parte 1](https://github.com/cortinico/gulp-raspi/raw/master/seminar-part1/slides.pdf)
 
-* Slides Seminario Parte 2 - Ancora da realizzare
+* [Slides Seminario Parte 2](https://github.com/cortinico/gulp-raspi/raw/master/seminar-part2/slides.pdf)
 
 ![Front](http://i58.tinypic.com/2pttjmg.png)
 
