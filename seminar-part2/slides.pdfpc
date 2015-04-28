@@ -1,0 +1,67 @@
+[file]
+slides.pdf
+[skip]
+4,5,6,7,8,9,11,14,15,16,17,18,20,21,22,23,24,25,35,36,37,38,39,42,43,44,45,49,50,51,55,56,57,60,61,62,76,77,80,81,82,
+[notes]
+### 3
+vedi pentium 2/3 circa del 1999
+### 6
+In principio doveva essere un Python Interpreter, da qui il nome PI
+### 7
+Il pulsante di accensione puo' essere realizzato tramite GPIO
+### 12
+molto simile, ma Cortex quad core
+### 13
+accennare al fatto che ci sono state due revisioni di Model B.
+Inoltre il concetto di memoria shared va approfondito.
+
+Codec H264/MPEG4 AVC, non e' libero. Codifica a 1080p (file mkv). Adesso e' uscito H265
+
+Il coassiale nel B+/A+/B2 e' integrato nel jack.
+Dire del protocollo CEC
+### 15
+i2c - inter integrated circuit, comunicazione seriale
+uart - Universal asyncronous receiver/transmitter. Converte da parallelo a seriale async
+spi - Serial peripheral interface
+### 16
+classe 10: 10mb/s. Senno UHS 3 e' 30mb/s
+### 17
+Nota al piccolo dissipatore. Utile in caso di overclocking (circa 300mhz).
+### 18
+Risoluzione full hd. Costo circa 30 euro.
+### 19
+Pi 2: 45 euro
+B+: 32 euro
+### 22
+Dire dello shop delle applicazioni, di minecraft e di wolfram matematica.
+### 23
+expand-rootfs e sshserver.
+La password di default e' raspberry (user pi)
+### 26
+Utile la questione degli screaper. Inoltre gestisce serie tv, streaming da una serie di formati. Telecomandi remoti.
+### 28
+Protocollo CEC - COnsumer electronics controls
+### 29
+Prestazioni medie. Senno' streaming tipo thinclient (VNC/Freenx).
+### 30
+Board domestica? Meteo?
+### 31
+Non dimenticarsi di essere un seed...
+### 32
+Protocolli piu' usati vedi Samba, nfs, ssh, sftp.
+Inoltre puo' fare anche da WOL server
+### 33
+Dire degli IVR e chiamate interne (anche da fuori).
+### 34
+Sensoristica sulle porte
+### 35
+Si puo' provare anche online, molti progetti
+### 36
+### 37
+Anche con controller usb o tramite GPIO
+### 38
+Controlla lo stereo dallo smartphone.
+### 48
+Utile l'appendice con il riferimento di tutto l'hardware
+### 49
+eLinux - Embedded linux.
