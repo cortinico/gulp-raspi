@@ -356,6 +356,21 @@ vncserver :0 -geometry 1920x1080 -depth 24
 Colleghiamoci da un altro computer usando il software \textbf{xtightvncviewer} oppure tramite \textbf{remmina}.
 \end{frame}
 
+\begin{frame}\frametitle{SSH -X}
+\`E possibile collegarsi graficamente anche utilizzando SSH con \textbf{X Forwarding}, non si aprir\`a una sessione grafica come succede con VNC, ma potremo comunque avviare applicazioni grafiche.
+\medskip
+\begin{block}{}
+\begin{center}
+\texttt{ssh -X pi@[ip\_addr\_raspi]}
+\end{center}
+\end{block}
+
+\medskip
+Apriremo una connessione SSH, ma se invocheremo un comando grafico (e.g. \textbf{pcmanfm}, il programma per navigare fra le cartelle) apriremo una finestra come se fossimo davanti al monitor del Raspberry Pi. \\
+\medskip
+A differenza di VNC questo protocollo \`e \textbf{compresso} e \textbf{cifrato}.
+\end{frame}
+
 
 %%%%%%%%%%%%%%%%
 \section{A simple daemon}
@@ -450,8 +465,8 @@ Andiamo nel file \texttt{/etc/init.d/transmission-daemon} e modifichiamo la riga
 \begin{verbatim}
 sudo chown pi -R /var/lib/transmission-daemon/info/
 sudo chown pi /etc/transmission-daemon/settings.json
-sudo /etc/init.d/transmission-daemon/reload
-sudo /etc/init.d/transmission-daemon/restart
+sudo /etc/init.d/transmission-daemon reload
+sudo /etc/init.d/transmission-daemon restart
 \end{verbatim}
 \end{small}
 \end{block}
