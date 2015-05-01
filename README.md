@@ -7,9 +7,9 @@ Le slides sono state realizzate con LaTeX Beamer e sono rilasciate sotto licenza
 
 * [Slides Linux Day](https://github.com/cortinico/gulp-raspi/raw/master/linuxday/slides.pdf)
 
-* [Slides Seminario Parte 1](https://github.com/cortinico/gulp-raspi/raw/master/seminar-part1/slides.pdf)
+* [Slides Seminario Parte 1 - 15/04/2015](https://github.com/cortinico/gulp-raspi/raw/master/seminar-part1/slides.pdf)
 
-* Slides Seminario Parte 2
+* Slides Seminario Parte 2 - 29/04/2015
   * [Prima Parte - Nicola Corti](https://github.com/cortinico/gulp-raspi/raw/master/seminar-part2/slides.pdf)
   * Seconda Parte - Niccolò Pieretti - A breve online
 
